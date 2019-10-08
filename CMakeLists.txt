@@ -426,7 +426,7 @@ endif()
 #END tonlib
 
 #BEGIN internal
-#if (NOT TON_ONLY_TONLIB)
+if (NOT TON_ONLY_TONLIB)
 #add_executable(test-db test/test-td-main.cpp ${TONDB_TEST_SOURCE})
 #target_link_libraries(test-db PRIVATE ton_db memprof)
 
@@ -486,7 +486,7 @@ if (HAS_PARENT)
           ${CELLS_TEST_SOURCE} # ${TONVM_TEST_SOURCE} ${FIFT_TEST_SOURCE} ${TONLIB_ONLINE_TEST_SOURCE}
           PARENT_SCOPE)
 endif()
-add_library(all_tests INTERFACE)
+#add_library(all_tests INTERFACE)
 target_link_libraries(all_tests INTERFACE tdutils tdactor tdnet tdfec ton_db ton_crypto fift-lib)
 endif()
 #END internal
