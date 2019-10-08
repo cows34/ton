@@ -76,10 +76,14 @@ if (TON_ONLY_TONLIB)
 else()
   set(NOT_TON_ONLY_TONLIB true)
 endif()
-option(TON_USE_ROCKSDB "Use \"OFF\" to enable RocksDb." ${NOT_TON_ONLY_TONLIB})
-option(TON_USE_ABSEIL "Use \"OFF\" to enable Abseil." ${NOT_TON_ONLY_TONLIB})
+
+option(TON_USE_ROCKSDB "Use \"ON\" to enable RocksDb." ${NOT_TON_ONLY_TONLIB})
+option(TON_USE_ABSEIL "Use \"ON\" to enable Abseil." ${NOT_TON_ONLY_TONLIB})
 option(TON_USE_JEMALLOC "Use \"ON\" to enable JeMalloc." OFF)
 #END internal
+
+set(TON_USE_ROCKSDB false)
+set(TON_USE_ABSEIL false)
 
 option(TONLIB_ENABLE_JNI "Use \"ON\" to enable JNI-compatible TonLib API.")
 option(TON_USE_ASAN "Use \"ON\" to enable AddressSanitizer." OFF)
