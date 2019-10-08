@@ -583,7 +583,7 @@ add_custom_target(examples DEPENDS test_c test_cpp_rfc test_cpp_rfc_linked test_
 
 
 
-add_custom_target(everything DEPENDS make_static_deterministic examples docs CLI_tools)
+add_custom_target(everything DEPENDS make_static_deterministic examples CLI_tools)
 
 
 foreach (hdr ${HEADERS} ${HEADERS_ONLY} ${HEADERS_LINKED})
