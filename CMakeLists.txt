@@ -70,7 +70,7 @@ else()
 endif()
 
 #BEGIN internal
-option(TON_ONLY_TONLIB "Use \"ON\" to build only tonlib." OFF)
+option(TON_ONLY_TONLIB "Use \"ON\" to build only tonlib." ON)
 if (TON_ONLY_TONLIB)
   set(NOT_TON_ONLY_TONLIB false)
 else()
@@ -82,8 +82,8 @@ option(TON_USE_ABSEIL "Use \"ON\" to enable Abseil." ${NOT_TON_ONLY_TONLIB})
 option(TON_USE_JEMALLOC "Use \"ON\" to enable JeMalloc." OFF)
 #END internal
 
-set(TON_USE_ROCKSDB false)
-set(TON_USE_ABSEIL false)
+set(TON_USE_ROCKSDB OFF)
+set(TON_USE_ABSEIL OFF)
 
 option(TONLIB_ENABLE_JNI "Use \"ON\" to enable JNI-compatible TonLib API.")
 option(TON_USE_ASAN "Use \"ON\" to enable AddressSanitizer." OFF)
